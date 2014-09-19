@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PhraseDictionaryRepository.cs" company="uni-app">
+// <copyright file="WordRepository.cs" company="uni-app">
 //   -
 // </copyright>
 // <summary>
@@ -9,18 +9,10 @@
 
 namespace LearnSchool.Repositories
 {
-    using System.Collections.Generic;
-    using System.Linq;
-
     using LearnSchool.EntityFramework.Repositories;
     using LearnSchool.Interfaces;
 
-    public class PhraseDictionaryRepository : LearnSchoolRepositoryBase<PhraseDictionary>, IPhraseDictionaryRepository
+    public class WordRepository : LearnSchoolRepositoryBase<Word>, IWordsRepository
     {
-        public List<PhraseDictionary> GetDictionaries()
-        {
-            var query = this.GetAll();
-            return query.ToList();
-        }
     }
 }

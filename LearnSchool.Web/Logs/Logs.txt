@@ -76,3 +76,16 @@ DEBUG 2014-09-19 14:36:47,869 [1    ] Abp.Modules.AbpModuleLoader              -
 DEBUG 2014-09-19 14:36:47,870 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.LearnSchoolWebApiModule, LearnSchool.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 DEBUG 2014-09-19 14:36:47,870 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.Web.LearnSchoolWebModule, LearnSchool.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 DEBUG 2014-09-19 14:36:48,124 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+DEBUG 2014-09-19 19:58:52,873 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-09-19 19:58:52,931 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:52,932 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:52,934 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:52,940 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:52,940 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:52,942 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,162 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.LearnSchoolCoreModule, LearnSchool.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,162 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.LearnSchoolApplicationModule, LearnSchool.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,164 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.LearnSchoolDataModule, LearnSchool.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,165 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.LearnSchoolWebApiModule, LearnSchool.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,165 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: LearnSchool.Web.LearnSchoolWebModule, LearnSchool.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-09-19 19:58:53,315 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
