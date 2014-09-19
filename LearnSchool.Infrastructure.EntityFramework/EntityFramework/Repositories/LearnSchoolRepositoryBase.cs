@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Abp.Domain.Entities;
-using Abp.Domain.Repositories.EntityFramework;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LearnSchoolRepositoryBase.cs" company="uni-app">
+//   -
+// </copyright>
+// <summary>
+//   -
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace LearnSchool.EntityFramework.Repositories
 {
+    using Abp.Domain.Entities;
+    using Abp.Domain.Repositories.EntityFramework;
+
     public abstract class LearnSchoolRepositoryBase<TEntity, TPrimaryKey> : EfRepositoryBase<LearnSchoolDbContext, TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
     {
@@ -15,6 +20,5 @@ namespace LearnSchool.EntityFramework.Repositories
     public abstract class LearnSchoolRepositoryBase<TEntity> : LearnSchoolRepositoryBase<TEntity, int>
         where TEntity : class, IEntity<int>
     {
-
     }
 }

@@ -1,12 +1,22 @@
-﻿using System;
-using System.Reflection;
-using Abp.Dependency;
-using Abp.Modules;
-using Abp.Startup;
-using Abp.Startup.Infrastructure.EntityFramework;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="LearnSchoolDataModule.cs" company="uni-app">
+//   -
+// </copyright>
+// <summary>
+//   -
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace LearnSchool
 {
+    using System;
+    using System.Reflection;
+
+    using Abp.Dependency;
+    using Abp.Modules;
+    using Abp.Startup;
+    using Abp.Startup.Infrastructure.EntityFramework;
+
     public class LearnSchoolDataModule : AbpModule
     {
         public override Type[] GetDependedModules()
