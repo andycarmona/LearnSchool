@@ -11,6 +11,8 @@ namespace LearnSchool.Interfaces
 {
     using Abp.Domain.Repositories;
 
+    using LearnSchool.EntityModels;
+
     public interface IPhraseRepository : IRepository<Phrase>
     {
     }

@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace LearnSchool
+namespace LearnSchool.EntityModels
 {
     using System;
     using System.Collections.Generic;

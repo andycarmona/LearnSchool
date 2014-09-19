@@ -13,12 +13,14 @@ namespace LearnSchool.Interfaces
 
     using Abp.Application.Services;
 
+    using LearnSchool.Dto;
+
     public interface IPhraseDictionaryService : IApplicationService
     {
-        List<PhraseDictionary> GetPhraseDictionaries();
+        GetPhraseDictionaryOutput GetPhraseDictionaries();
 
-        void UpdatePhraseDictionary(int id);
+        void UpdatePhraseDictionary(UpdatePhraseDictionaryInput input);
 
-        void CreatePhraseDictionary();
+        void CreatePhraseDictionary(CreatePhraseDictionaryInput input);
     }
 }

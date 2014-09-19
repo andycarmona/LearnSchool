@@ -13,6 +13,7 @@ namespace LearnSchool.Repositories
     using System.Linq;
 
     using LearnSchool.EntityFramework.Repositories;
+    using LearnSchool.EntityModels;
     using LearnSchool.Interfaces;
 
     public class PhraseDictionaryRepository : LearnSchoolRepositoryBase<PhraseDictionary>, IPhraseDictionaryRepository

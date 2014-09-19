@@ -72,10 +72,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\CreatePhraseDictionaryInput.cs" />
+    <Compile Include="Dto\GetPhraseDictionaryOutput.cs" />
+    <Compile Include="Dto\PhraseDictionaryDto.cs" />
+    <Compile Include="Dto\UpdatePhraseDictionaryInput.cs" />
     <Compile Include="Interfaces\IPhraseDictionaryService.cs" />
     <Compile Include="LearnSchoolApplicationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\PhraseDictionaryService.cs" />
+    <Compile Include="Services\PhraseDictionaryService.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

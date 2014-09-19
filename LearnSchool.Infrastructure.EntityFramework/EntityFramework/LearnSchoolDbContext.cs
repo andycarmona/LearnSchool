@@ -13,6 +13,8 @@ namespace LearnSchool.EntityFramework
 
     using Abp.Domain.Repositories.EntityFramework;
 
+    using LearnSchool.EntityModels;
+
     public class LearnSchoolDbContext : AbpDbContext
     {
         public LearnSchoolDbContext()

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PhraseRepository.cs" company="uni-app">
+// <copyright file="PhraseDictionaryDto.cs" company="uni-app">
 //   -
 // </copyright>
 // <summary>
@@ -7,13 +7,18 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace LearnSchool.Repositories
+namespace LearnSchool.Dto
 {
-    using LearnSchool.EntityFramework.Repositories;
-    using LearnSchool.EntityModels;
-    using LearnSchool.Interfaces;
+    using System.Collections.Generic;
 
-    public class PhraseRepository : LearnSchoolRepositoryBase<Phrase>, IPhraseRepository
+    using Abp.Application.Services.Dto;
+
+    using LearnSchool.EntityModels;
+
+    public class PhraseDictionaryDto : EntityDto
     {
+        public string DictionaryName { get; set; }
+
+        public virtual List<Phrase> Phrases { get; set; }
     }
 }
