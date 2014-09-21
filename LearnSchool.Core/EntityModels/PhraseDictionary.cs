@@ -15,14 +15,6 @@ namespace LearnSchool.EntityModels
 
     public class PhraseDictionary : Entity
     {
-        private string _dictionaryName;
-
-        public PhraseDictionary(string dictionaryName)
-        {
-      
-           _dictionaryName = dictionaryName;
-        }
-
         public string DictionaryName { get; set; }
         
         public virtual List<Phrase> Phrases { get; set; }  

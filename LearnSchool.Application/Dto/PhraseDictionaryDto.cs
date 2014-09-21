@@ -13,12 +13,10 @@ namespace LearnSchool.Dto
 
     using Abp.Application.Services.Dto;
 
-    using LearnSchool.EntityModels;
-
     public class PhraseDictionaryDto : EntityDto
     {
         public string DictionaryName { get; set; }
 
-        public virtual List<Phrase> Phrases { get; set; }
+        public virtual List<PhraseDto> Phrases { get; set; }
     }
 }

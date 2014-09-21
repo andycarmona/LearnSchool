@@ -16,7 +16,7 @@ namespace LearnSchool.Repositories
     using LearnSchool.EntityModels;
     using LearnSchool.Interfaces;
 
-    public class PhraseDictionaryRepository : LearnSchoolRepositoryBase<PhraseDictionary>, IPhraseDictionaryRepository
+    public class PhraseDictionaryRepository : LearnSchoolRepositoryBase<PhraseDictionary, int>, IPhraseDictionaryRepository
     {
         public List<PhraseDictionary> GetDictionaries()
         {

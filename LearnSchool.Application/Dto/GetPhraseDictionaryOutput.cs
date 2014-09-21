@@ -1,11 +1,15 @@
 ﻿namespace LearnSchool.Dto
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using Abp.Application.Services.Dto;
 
-   public class GetPhraseDictionaryOutput : IOutputDto
+    public class GetPhraseDictionaryOutput : IOutputDto
     {
-       public virtual List<PhraseDictionaryDto> Phrases { get; set; }  
+        [Required]
+        public string DictionaryName { get; set; }
+
+       public virtual List<PhraseDto> Phrases { get; set; }  
     }
 }

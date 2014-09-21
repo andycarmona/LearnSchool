@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnSchool.Web", "LearnSch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnSchool.Infrastructure.EntityFramework", "LearnSchool.Infrastructure.EntityFramework\LearnSchool.Infrastructure.EntityFramework.csproj", "{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnSchool.Infrastructure.EntityFrameWork.Test", "LearnSchool.Infrastructure.EntityFrameWork_Test\LearnSchool.Infrastructure.EntityFrameWork.Test.csproj", "{4E04B5CE-F5F3-444E-BC2F-5C695FAF40FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E04B5CE-F5F3-444E-BC2F-5C695FAF40FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E04B5CE-F5F3-444E-BC2F-5C695FAF40FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E04B5CE-F5F3-444E-BC2F-5C695FAF40FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E04B5CE-F5F3-444E-BC2F-5C695FAF40FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,10 @@ namespace LearnSchool.Interfaces
 
     public interface IPhraseDictionaryService : IApplicationService
     {
-        GetPhraseDictionaryOutput GetPhraseDictionaries();
+
+        GetPhraseDictionaryOutput GetADictionary(int id);
+       
+        List<GetPhraseDictionaryOutput> GetPhraseDictionaries();
 
         void UpdatePhraseDictionary(UpdatePhraseDictionaryInput input);
 

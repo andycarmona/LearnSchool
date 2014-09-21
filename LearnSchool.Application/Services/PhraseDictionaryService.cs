@@ -24,25 +24,23 @@ namespace LearnSchool.Services
     {
         private readonly IPhraseDictionaryRepository _phraseDictionaryRepository;
 
-        private readonly IPhraseRepository _phraseRepository;
-
-        private readonly IWordsRepository _wordRepository;
-
-        public PhraseDictionaryService(
-            IPhraseRepository phraseRepository,
-            IPhraseDictionaryRepository phraseDictionaryRepository,
-            IWordsRepository wordRepository)
+        public PhraseDictionaryService(IPhraseDictionaryRepository phraseDictionaryRepository)
         {
             _phraseDictionaryRepository = phraseDictionaryRepository;
-            _phraseRepository = phraseRepository;
-            _wordRepository = wordRepository;
         }
 
-        public GetPhraseDictionaryOutput GetPhraseDictionaries()
+        public GetPhraseDictionaryOutput GetADictionary(int id)
         {
-            var phraseDictionaries = this._phraseDictionaryRepository.GetAll().ToList();
+            var aDictionary = this._phraseDictionaryRepository.Get(id);
+            var dictionaryDto = Mapper.Map<GetPhraseDictionaryOutput>(aDictionary);
+            return dictionaryDto;
+        }
 
-            return new GetPhraseDictionaryOutput { Phrases = Mapper.Map<List<PhraseDictionaryDto>>(phraseDictionaries) };
+        public List<GetPhraseDictionaryOutput> GetPhraseDictionaries()
+        {
+            var phraseDictionaries = this._phraseDictionaryRepository.GetDictionaries();
+            var aListOfDictionaries = Mapper.Map<List<GetPhraseDictionaryOutput>>(phraseDictionaries);
+            return aListOfDictionaries;
         }
 
         public void UpdatePhraseDictionary(UpdatePhraseDictionaryInput input)
@@ -58,7 +56,7 @@ namespace LearnSchool.Services
         {
             Logger.Info("Creating a new dictionary: " + input);
 
-            var phraseDictionary = new PhraseDictionary(input.DictionaryName);
+            var phraseDictionary = new PhraseDictionary();
 
             _phraseDictionaryRepository.Insert(phraseDictionary);
         }
