@@ -29,18 +29,27 @@ namespace LearnSchool.Services
             _phraseDictionaryRepository = phraseDictionaryRepository;
         }
 
-        public GetPhraseDictionaryOutput GetADictionary(int id)
+        public PhraseDictionaryDto GetADictionary(int id)
         {
+            GetMappedEntities();
+
             var aDictionary = this._phraseDictionaryRepository.Get(id);
-            var dictionaryDto = Mapper.Map<GetPhraseDictionaryOutput>(aDictionary);
-            return dictionaryDto;
+            
+            var aPDictionary = Mapper.Map<PhraseDictionary, PhraseDictionaryDto>(aDictionary);
+           
+            return aPDictionary;
         }
 
-        public List<GetPhraseDictionaryOutput> GetPhraseDictionaries()
-        {
-            var phraseDictionaries = this._phraseDictionaryRepository.GetDictionaries();
-            var aListOfDictionaries = Mapper.Map<List<GetPhraseDictionaryOutput>>(phraseDictionaries);
-            return aListOfDictionaries;
+       
+
+        public List<PhraseDictionaryDto> GetPhraseDictionaries()
+        { 
+            GetMappedEntities();
+
+            var phraseDictionaries = this._phraseDictionaryRepository.GetAllList();
+            
+            var dictionaryList = Mapper.Map<List<PhraseDictionary>, List<PhraseDictionaryDto>>(phraseDictionaries);
+            return dictionaryList;
         }
 
         public void UpdatePhraseDictionary(UpdatePhraseDictionaryInput input)
@@ -55,10 +64,22 @@ namespace LearnSchool.Services
         public void CreatePhraseDictionary(CreatePhraseDictionaryInput input)
         {
             Logger.Info("Creating a new dictionary: " + input);
+            GetMappedEntities();
 
-            var phraseDictionary = new PhraseDictionary();
+            var dictionaryEntity = new PhraseDictionary();
+            dictionaryEntity = Mapper.Map<CreatePhraseDictionaryInput, PhraseDictionary>(input);
+           
+            _phraseDictionaryRepository.Insert(dictionaryEntity);
+        }
 
-            _phraseDictionaryRepository.Insert(phraseDictionary);
+        private static void GetMappedEntities()
+        {
+            Mapper.CreateMap<CreatePhraseDictionaryInput, PhraseDictionary>()
+           .ForMember(c => c.Phrases, option => option.MapFrom(src => src.Phrases));
+            Mapper.CreateMap<PhraseDictionary, PhraseDictionaryDto>()
+                .ForMember(c => c.Phrases, option => option.MapFrom(src => src.Phrases));
+            Mapper.CreateMap<Phrase, PhraseDto>();
+            Mapper.CreateMap<Word, WordDto>();
         }
     }
 }

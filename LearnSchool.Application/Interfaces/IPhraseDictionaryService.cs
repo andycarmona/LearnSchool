@@ -10,17 +10,19 @@
 namespace LearnSchool.Interfaces
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     using Abp.Application.Services;
 
     using LearnSchool.Dto;
+    using LearnSchool.EntityModels;
 
     public interface IPhraseDictionaryService : IApplicationService
     {
 
-        GetPhraseDictionaryOutput GetADictionary(int id);
+        PhraseDictionaryDto GetADictionary(int id);
        
-        List<GetPhraseDictionaryOutput> GetPhraseDictionaries();
+        List<PhraseDictionaryDto> GetPhraseDictionaries();
 
         void UpdatePhraseDictionary(UpdatePhraseDictionaryInput input);
 

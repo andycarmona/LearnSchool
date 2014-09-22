@@ -25,7 +25,7 @@ namespace LearnSchool.Dto
         [Range(1, 20)]
         public string DictionaryName { get; set; }
 
-        public virtual List<Phrase> Phrases { get; set; }
+        public List<Phrase> Phrases { get; set; }
 
         public void AddValidationErrors(List<ValidationResult> results)
         {

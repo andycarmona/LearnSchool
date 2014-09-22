@@ -10,6 +10,6 @@
         [Required]
         public string DictionaryName { get; set; }
 
-       public virtual List<PhraseDto> Phrases { get; set; }  
+       public List<PhraseDto> Phrases { get; set; }  
     }
 }
